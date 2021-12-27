@@ -14,10 +14,13 @@ code {
 }
 
 *{
-  /* margin: 0; */
-  /* padding: 0; */
+  margin: 0; 
+  padding: 0; 
   box-sizing: border-box;
   text-decoration: none;
+  list-style: none;
+  border: 0;
+  outline: 0;
 }
 
 .product{
@@ -25,5 +28,42 @@ code {
   background: #fff;
   border: 1px solid #ddd;
   margin-bottom: 20px;
+  width: 24%;
+  
 }
 
+.product img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.header {
+  background: linear-gradient(to bottom, green , darkGreen);
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 22px;
+  letter-spacing: 1px;
+  position: sticky;
+  top: 0;
+}
+
+.header span {
+  margin: 0 10px;
+  font-weight: bold;
+}
+
+
+.container{
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.products {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
