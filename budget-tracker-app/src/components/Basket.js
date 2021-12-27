@@ -4,12 +4,21 @@ import { moneyFormat } from "../helpers";
 function Basket( { basket , total , resetCart}) {
     return ( 
         <>
-            {basket.map(item => (
-                <BasketItem item={item} />
-            ))}
+            <div className="basket-container container">
 
-            <div>Total =  {moneyFormat(total)}</div>
-            <button onClick={resetCart}>Reset Cart</button>
+                <h3>Shopping Details</h3>
+                <ul>
+                    {basket.map(item => (
+                        <BasketItem key={item.id} item={item} />
+                    ))} 
+                </ul>
+
+                <div className="total" >Total = {moneyFormat(total)}</div>
+
+                <button className="reset-btn" onClick={resetCart}>Reset Cart</button>
+            </div>
+
+            
         </>
     );
 }

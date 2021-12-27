@@ -1,3 +1,5 @@
+import { moneyFormat } from "../helpers";
+
 function Product( props ) {
 
     const { product , basket , setBasket , money , total } = props
@@ -50,12 +52,16 @@ function Product( props ) {
 
     return ( 
        <div className="product">
-            <h6>{product.title}</h6>
+            
             <img alt="product" src={product.image} />
-            <div className="price">$ {product.price}</div>
-            <button disabled={product.price + total > money} onClick={addBasket} >Buy</button>
-            <span className="amount">{basketItem && basketItem.amount || 0}</span>
-            <button disabled={!basketItem} onClick={removeBasket}>Sell</button>
+            <h6>{product.title}</h6>
+            <div className="price"> {moneyFormat(product.price)}</div>
+
+            <div className="actions">
+                <button className="buy-btn" disabled={product.price + total > money} onClick={addBasket} >Buy</button>
+                <span className="amount">{basketItem && basketItem.amount || 0}</span>
+                <button className="sell-btn" disabled={!basketItem} onClick={removeBasket}>Sell</button>
+            </div>
             
        </div>
 
