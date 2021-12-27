@@ -1,8 +1,8 @@
 function BasketItem( { item } ) {
     return ( 
-        <div>
-            {item.title} x {item.amount}
-        </div>
+        <li className="basket-item">
+            {item.title} x <span>{item.amount}</span>
+        </li>
     );
 }
 

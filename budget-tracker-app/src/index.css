@@ -37,6 +37,62 @@ code {
   object-fit: cover;
 }
 
+.product h6 {
+  font-size: 18px;
+}
+
+.product .price {
+  font-size: 18px;
+  color: rgb(17, 156, 17);
+}
+
+.product .actions{
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.actions button{
+  height: 40px;
+  padding: 0 15px;
+  flex: 1;
+}
+
+.actions button[disabled] {
+  opacity: .3;
+  cursor: not-allowed;
+}
+
+.actions .buy-btn{
+  background-color: cyan;
+  font-size: 17px;
+  font-weight: 500;
+  border-radius: 0 4px 4px 0;
+}
+
+.actions .sell-btn{
+  background-color: #ccc;
+  color: #333;
+  font-size: 17px;
+  font-weight: 500;
+  border-radius: 4px 0 0 4px ;
+
+}
+
+
+.actions .amount{
+  width: 50px;
+  font-weight: bold;
+  color: #555;
+  font-size: 17px;
+  text-align: center;
+  border: 1px solid #ddd ;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .header {
   background: linear-gradient(to bottom, green , darkGreen);
   height: 60px;
@@ -57,7 +113,7 @@ code {
 
 
 .container{
-  width: 1000px;
+  width: 1200px;
   margin: 0 auto;
 }
 
@@ -67,3 +123,49 @@ code {
   flex-wrap: wrap;
   margin-top: 10px;
 }
+
+
+.basket-container{
+  background-color: #fff;
+  margin-bottom: 20px;
+  padding: 20px;
+}
+
+.basket-container h3{
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.basket-container .total {
+  border-top: 1px solid #ddd;
+  padding-top: 10px;
+  margin-top: 10px;
+  text-align: right;
+  font-size: 18px;
+  font-weight: bold;
+  color: rgb(17, 156, 17);
+
+
+}
+
+.basket-item{
+  font-weight: 450;
+  font-size: 18px;
+  padding-bottom: 10px;
+}
+
+.basket-item span{
+  color: #999;
+}
+
+.reset-btn{
+  background-color: cyan;
+  color: #555;
+  border: 1px solid cyan;
+  height: 40px;
+  padding: 0 20px;
+  font-weight: 500;
+  font-size: 17px;
+  cursor: pointer;
+}
+
